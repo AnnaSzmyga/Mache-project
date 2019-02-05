@@ -1,0 +1,93 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Lato', sans-serif;
+}
+button {
+	height: 50px;
+	padding: 0 50px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 38px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: $pink;
+	border: none;
+	border-radius: 25px;
+	transition-duration: 0.3s;
+	&:hover {
+		transform: scale(1.1);
+	}
+
+}
+header {
+	width: 100%;
+	min-height: 800px;
+	color: #fff;
+	background-image: url(../images/background-image.png);
+	background-position: 50% 0%;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		.logo {
+			cursor: pointer;
+			.logo-graphic {
+				display: inline-block;
+				color: $pink;
+				font-weight: bold;
+				font-size: 25px;
+			}
+			.brand-name {
+				display: inline-block;
+				font-weight: bold;
+				font-size: 25px;
+			}
+		}
+		ul li {
+			display: inline-block;
+			list-type-style: none;
+			padding: 0 10px;
+			&:hover a {
+				color: $pink;
+			}
+			a {
+				text-decoration: none;
+				font-size: 16px;
+				line-height: 38px;
+				color: #fff;
+				font-weight: bold;
+				text-transform: capitalize;
+			}
+		}
+	}
+	.jumbotron {
+		text-align: center;
+		h1 {
+			margin-top: 210px;
+			margin-bottom: 80px;
+			font-size: 46px;
+			text-transform: uppercase;
+			font-weight: 300;
+			span {
+				font-weight: 900;
+			}
+		}
+		p {
+			font-size: 22px;
+			line-height: 38px;
+			font-weight: 300;
+		}
+		button {
+			margin-top: 70px;
+		}
+	}
+}
