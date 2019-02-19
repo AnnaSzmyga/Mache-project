@@ -3,17 +3,28 @@
 @import "normalize";
 @import "layout";
 
+@font-face {
+	font-family: 'DroidSerif-Bold';
+	src: url(../fonts/droidserif-bold.ttf);
+}
+
 
 * {
 	box-sizing: border-box;
 }
 body {
 	font-family: 'Lato', sans-serif;
+	color: $text-color;
+}
+p {
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 300;
 }
 button {
 	height: 50px;
 	padding: 0 50px;
-	color: #fff;
+	color: $background-grey;
 	font-size: 15px;
 	line-height: 38px;
 	font-weight: bold;
@@ -25,14 +36,25 @@ button {
 	&:hover {
 		transform: scale(1.1);
 	}
-
+}
+.underline {
+	content: "";
+	display: block;
+	background-color: $pink;
+	height: 2px;
+	width: 195px;
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 header {
 	width: 100%;
 	min-height: 800px;
-	color: #fff;
+	color: $background-grey;
 	background-image: url(../images/background-image.png);
 	background-position: 50% 0%;
+	background-repeat: no-repeat;
 
 	nav {
 		display: flex;
@@ -77,8 +99,13 @@ header {
 			font-size: 46px;
 			text-transform: uppercase;
 			font-weight: 300;
+			position: relative;
+
 			span {
 				font-weight: 900;
+			}
+			&::after {
+				@extend .underline;
 			}
 		}
 		p {
@@ -89,5 +116,197 @@ header {
 		button {
 			margin-top: 70px;
 		}
+	}
+}
+section {
+	text-align: center;
+}
+.section-title {
+	font-weight: 300;
+	font-style: italic;
+	font-size: 38px;
+	line-height: 52px;
+	text-transform: capitalize;
+	padding-top: 150px;
+	margin-top: 0;
+	margin-bottom: 90px;
+	position: relative;
+	&::after {
+		@extend .underline;
+	}
+}
+.about {
+	background-color: $background-grey;
+	padding-bottom: 100px;
+	.section-title {
+		text-transform: none;
+		&::after {
+			left: 0;
+		}
+	}
+	a {
+		text-decoration: none;
+		
+		.video-link-wrapper {
+			display: flex;
+			align-items: center;
+			margin-top: 40px;
+			p {
+				font-size: 15px;
+				text-transform: uppercase;
+				color: $pink;
+				font-weight: 500;
+			}
+			i.fas {
+				height: 28px;
+				width: 28px;
+				color: $pink;
+				font-size: 20px;
+				line-height: 26px;
+				text-align: center;
+				border: 1px solid $pink;
+				border-radius: 50%;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+.small-title {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+}
+.services {
+	padding-bottom: 110px;
+	.icon-wrapper {
+		margin: 80px auto;
+		margin-bottom: 30px;
+		width: 135px;
+		height: 135px;
+		border-radius: 50%;
+		border: 2px solid #d4d4d4;
+		position: relative;
+		cursor: pointer;
+		&:hover {
+			border: 2px solid $pink;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.small-title {
+		color: $pink;
+	}
+}
+.quotes {
+	background-image: url(../images/background-image.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% -20%;
+	min-height: 500px;
+	padding-top: 80px;
+	padding-bottom: 160px;
+	.quotation-marks {
+		font-family: 'DroidSerif-Bold';
+		font-size: 158px;
+		line-height: 52px;
+		color: $pink;
+		margin: 0;
+		&.up {
+			margin-bottom: 100px;
+		}		
+	}
+	.quotes-text {
+		font-size: 25px;
+		line-height: 40px;
+		font-weight: 300;
+		font-style: italic;
+		color: #fff;
+		margin-bottom: 0;
+	}
+}
+.our-prices {
+	padding-bottom: 140px;
+	background-color: $background-grey;
+	.price-box-wrapper {
+		margin: 15px;
+		margin-top: 90px;
+		position: relative;
+		&:hover .price-wrapper {
+			background-color: $pink;
+		}
+		.price-wrapper {
+			background-color: $text-color;
+			padding-top: 35px;
+			padding-bottom: 45px;
+			.price {
+				font-size: 15px;
+				font-weight: 700;
+				line-height: 38px;
+				color: $background-grey;
+				span {
+					font-size: 50px;
+					&.dollar {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.offert-name {
+			height: 50px;
+			width: 200px;
+			font-weight: bold;
+			line-height: 50px;
+			text-transform: uppercase;
+			background-color: $background-grey;
+			border-radius: 25px;
+			position: absolute;
+			top: 174px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			align-items: center;
+			p {
+				margin: auto;
+			}
+
+		}
+		.price-list-wrapper {
+			padding-top: 45px;
+			background-color: #fff;
+			ul {
+				list-style-type: none;
+				padding: 0;
+				li {
+					font-size: 15px;
+					font-weight: 300;
+					line-height: 38px;
+					color: $text-color;
+				}
+			}
+		}
+		button {
+			width: 200px;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 767px) {
+	.about .video-link-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	} /* --------------------------nie działa!!!!!!!!!!!!!!!!!!!*/
+}
+@media (min-width: 768px) {
+	.about {
+		text-align: left;
 	}
 }
