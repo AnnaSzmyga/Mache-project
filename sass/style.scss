@@ -295,6 +295,51 @@ section {
 		}
 	}
 }
+.additional-info {
+	padding-top: 130px;
+	padding-bottom: 80px;
+	.info-wrapper {
+		display: flex;
+		max-width: 500px;
+		margin: 40px 15px;
+		.icon-wrapper {
+			padding-right: 30px;
+			padding-left: 15px;
+		}
+		.info {
+			text-align: left;
+			.small-title {
+				margin-top: 0;
+				color: $pink;
+			}
+		}
+	}
+}
+.join-us {
+	background-color: $pink;
+	.join-us-wrapper {
+		display: flex;
+		align-items: center;
+		padding: 75px 15px;
+		h1 {
+			display: inline-block;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 38px;
+			line-height: 52px;
+			font-weight: 300;
+			span {
+				font-weight: 700;
+			}
+		}
+		button {
+			background-color: #fff;
+			color: $pink;
+			margin-left: 45px;
+		}
+	}
+	
+}
 
 
 
@@ -308,5 +353,10 @@ section {
 @media (min-width: 768px) {
 	.about {
 		text-align: left;
+	}
+}
+@media (max-width: 1099px) {
+	.additional-info .info-wrapper {
+		margin: 40px auto;
 	}
 }
