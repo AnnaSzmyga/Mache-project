@@ -645,6 +645,11 @@ p {
   font-weight: 300;
 }
 
+p.section-description {
+  max-width: 700px;
+  margin: auto;
+}
+
 button {
   height: 50px;
   padding: 0 50px;
@@ -999,6 +1004,8 @@ section {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   padding: 75px 15px;
 }
 
@@ -1019,6 +1026,71 @@ section {
   background-color: #fff;
   color: #ed145b;
   margin-left: 45px;
+  width: 170px;
+}
+
+.gallery {
+  padding-bottom: 60px;
+}
+
+.gallery .section-description {
+  margin-bottom: 50px;
+}
+
+.gallery .gallery-item {
+  margin: 30px 15px;
+  background-color: #f4f4f4;
+}
+
+.gallery .gallery-item .photo-wrapper {
+  position: relative;
+}
+
+.gallery .gallery-item .photo-wrapper img.photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery .gallery-item .photo-wrapper .layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(237, 20, 91, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.gallery .gallery-item .photo-wrapper .layer img.photo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery .gallery-item:hover .layer {
+  display: block;
+}
+
+.gallery .gallery-item .photo-description {
+  padding: 30px 15px;
+  text-align: left;
+}
+
+.gallery .show-more {
+  cursor: pointer;
+  margin-top: 80px;
+  display: inline-block;
+}
+
+.gallery .show-more p {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ed145b;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -1038,6 +1110,13 @@ section {
 @media (max-width: 1099px) {
   .additional-info .info-wrapper {
     margin: 40px auto;
+  }
+  .join-us .join-us-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .join-us .join-us-wrapper button {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
