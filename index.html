@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mache project</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900|Montserrat: 400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -75,10 +75,13 @@
         </div>
     </section>
     <section class="quotes">
-        <div class="container">
+        <div class="container quotes-container">
             <p class="quotation-marks up">,,</p>
-            <p class="quotes-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien.</p>
+            <p class="quotes-text active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien.</p>
+            <p class="quotes-text second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Fusce fringilla ipsum et urna tristique dapibus. </p>
             <p class="quotation-marks">,,</p>
+            <button class="btn-previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn-next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
     <section class="our-prices" id="prices">
@@ -169,41 +172,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-4 info-wrapper">
-                    <div class="icon-wrapper"><img src="images/icon-2.png"></div>
-                    <div class="info">
-                        <h4 class="small-title">High resolution</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="info-wrapper">
+                        <div class="icon-wrapper"><img src="images/icon-2.png"></div>
+                        <div class="info">
+                            <h4 class="small-title">Photography</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-4 info-wrapper">
-                    <div class="icon-wrapper"><img src="images/icon-3.png"></div>
-                    <div class="info">
-                        <h4 class="small-title">High resolution</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="info-wrapper">
+                        <div class="icon-wrapper"><img src="images/icon-3.png"></div>
+                        <div class="info">
+                            <h4 class="small-title">Easy to customize</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-lg-4 info-wrapper">
-                    <div class="icon-wrapper"><img src="images/icon-4.png"></div>
-                    <div class="info">
-                        <h4 class="small-title">High resolution</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="info-wrapper">
+                        <div class="icon-wrapper"><img src="images/icon-4.png"></div>
+                        <div class="info">
+                            <h4 class="small-title">24/7 support</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-4 info-wrapper">
-                    <div class="icon-wrapper"><img src="images/icon-5.png"></div>
-                    <div class="info">
-                        <h4 class="small-title">High resolution</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="info-wrapper">
+                        <div class="icon-wrapper"><img src="images/icon-5.png"></div>
+                        <div class="info">
+                            <h4 class="small-title">Powerful theme</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-4 info-wrapper">
-                    <div class="icon-wrapper"><img src="images/icon-6.png"></div>
-                    <div class="info">
-                        <h4 class="small-title">High resolution</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                <div class="col-sm-12 col-lg-4">
+                    <div class="info-wrapper">
+                        <div class="icon-wrapper"><img src="images/icon-6.png"></div>
+                        <div class="info">
+                            <h4 class="small-title">SEO optimization</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,6 +352,18 @@
     		</div>
     	</div>
     </footer>
+
+    <!--MODAL-->
+    <div class="overlay">
+    	<div class="modal">
+    		<div class="logo-wrapper"><img src="images/symu.png"></div>
+    		<h1>Thanks for downloading our template!</h1>
+    		<p>Hope that you enjoy it well! Check also our site.</p>
+    		<button class="close">www.symu.co</button>
+    	</div>
+    </div>
+
+
     <script src="js/script.js"></script>
   </body>
 </html>

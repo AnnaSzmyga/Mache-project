@@ -661,6 +661,7 @@ button {
   border: none;
   border-radius: 25px;
   transition-duration: 0.3s;
+  outline: none;
 }
 
 button:hover {
@@ -944,12 +945,39 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% -20%;
-  min-height: 500px;
+  min-height: 600px;
   padding-top: 80px;
   padding-bottom: 160px;
 }
 
-.quotes .quotation-marks {
+.quotes .quotes-container {
+  position: relative;
+}
+
+.quotes .quotes-container .btn-previous, .quotes .quotes-container .btn-next {
+  background: transparent;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quotes .quotes-container .btn-previous i.fas, .quotes .quotes-container .btn-next i.fas {
+  font-size: 36px;
+  color: grey;
+}
+
+.quotes .quotes-container .btn-previous {
+  left: 0;
+  margin-right: 10px;
+}
+
+.quotes .quotes-container .btn-next {
+  right: 0;
+  margin-left: 10px;
+}
+
+.quotes .quotes-container .quotation-marks {
   font-family: 'DroidSerif-Bold';
   font-size: 158px;
   line-height: 52px;
@@ -957,18 +985,29 @@ section {
   margin: 0;
 }
 
-.quotes .quotation-marks.up {
+.quotes .quotes-container .quotation-marks.up {
   margin-top: 100px;
   transform: rotate(180deg);
 }
 
-.quotes .quotes-text {
+.quotes .quotes-container .quotes-text {
   font-size: 25px;
   line-height: 40px;
   font-weight: 300;
   font-style: italic;
   color: #fff;
   margin: 0 auto;
+  width: 80%;
+  display: none;
+}
+
+.quotes .quotes-container .quotes-text.second {
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.quotes .quotes-container .quotes-text.active {
+  display: block;
 }
 
 .our-prices {
@@ -1259,6 +1298,71 @@ footer .footer-wrapper .design-by p {
   margin-right: 8px;
 }
 
+/* MODAL */
+.overlay {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-top: 220px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.hide-modal {
+  display: none;
+}
+
+.overlay .modal {
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  padding: 230px 90px 70px 90px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.overlay .modal .logo-wrapper {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px #b9bcd1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay .modal h1 {
+  font-size: 48px;
+  color: #ed145b;
+  font-weight: bold;
+}
+
+.overlay .modal p {
+  font-size: 24px;
+  color: #b9bcd1;
+}
+
+.overlay .modal button {
+  height: auto;
+  font-size: 24px;
+  padding: 20px 60px;
+  border-radius: 5px;
+  text-transform: none;
+}
+
 @media (max-width: 1099px) {
   .additional-info-1 .info-wrapper {
     margin: 40px auto;
@@ -1310,6 +1414,9 @@ footer .footer-wrapper .design-by p {
   header .jumbotron h1 {
     margin-top: 80px;
   }
+  .section-title {
+    padding-top: 100px;
+  }
   .about {
     max-height: none;
   }
@@ -1319,15 +1426,52 @@ footer .footer-wrapper .design-by p {
   .about .image-box {
     display: none;
   }
+  .additional-info-1 {
+    padding-top: 100px;
+  }
+  .gallery .show-more {
+    margin-top: 40px;
+  }
+  .additional-info-2 button {
+    margin-bottom: 100px;
+  }
   .download .image-box {
     display: none;
   }
   .download .text-wrapper {
     padding-left: 0;
   }
+  .download .text-wrapper button {
+    margin-bottom: 100px;
+  }
   .footer-wrapper {
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    padding-top: 140px;
+  }
+  .overlay .modal {
+    padding: 130px 20px 40px 20px;
+  }
+  .overlay .modal .logo-wrapper {
+    height: 230px;
+    width: 230px;
+  }
+  .overlay .modal .logo-wrapper img {
+    height: 170px;
+  }
+  .overlay .modal h1 {
+    font-size: 24px;
+  }
+  .overlay .modal p {
+    font-size: 14px;
+  }
+  .overlay .modal button {
+    padding: 10px 20px;
   }
 }
 
