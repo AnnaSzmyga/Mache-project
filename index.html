@@ -9,19 +9,22 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header id="home">
     	<div class="container">
 	    	<nav>
-	    		<div class="logo">
-	    			<p class="logo-graphic">///</p>
-	    			<p class="brand-name">Mache</p>
-	    		</div>
+	    		<div class="mobile-topbar">
+		    		<div class="logo">
+		    			<p class="logo-graphic">///</p>
+		    			<p class="brand-name">Mache</p>
+		    		</div>
+		    		<div class="hamburger"></div>
+		    	</div>
 	    		<div class="menu">
 	    			<ul>
-	    				<li><a href="#">Home</a></li>
-	    				<li><a href="#">About us</a></li>
-	    				<li><a href="#">Out services</a></li>
-	    				<li><a href="#">Prices</a></li>
+	    				<li><a href="#home">Home</a></li>
+	    				<li><a href="#about">About us</a></li>
+	    				<li><a href="#services">Out services</a></li>
+	    				<li><a href="#prices">Prices</a></li>
 	    				<li><a href="#">Contact</a></li>
 	    			</ul>
 	    		</div>
@@ -33,18 +36,21 @@
 	    	</div>
 	    </div>
     </header>
-    <section class="about">
+    <section class="about" id="about">
     	<div class="container">
-    		<div class="row">
-    			<div class="col-sm-12 col-md-5">
-    				<h2 class="section-title">Powerfull PSD template available for free!</h2>
-    				<p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien. Morbi nec laoreet arcu. Quisque sit amet maximus risus. In hac habitasse platea dictumst. Nam volutpat nulla nec odio rutrum, at gravida odio facilisis</p>
-    				<a href="#"><div class="video-link-wrapper"><p>See the video</p><i class="fas fa-caret-right"></i></div></a>
-    			</div>
-    		</div>
+			<div class="col-md-12 col-lg-6 text-wrapper">
+				<h2 class="section-title">Powerfull PSD template<br>available for free!</h2>
+				<p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien. Morbi nec laoreet arcu. Quisque sit amet maximus risus. In hac habitasse platea dictumst. Nam volutpat nulla nec odio rutrum, at gravida odio facilisis</p>
+				<a href="#"><div class="video-link-wrapper"><p>See the video</p><i class="fas fa-caret-right"></i></div></a>
+			</div>
     	</div>
+    	<div class="image-box">
+    		<img src="images/macbook.png" class="image-1">
+    		<img src="images/screen-content.png" class="image-2">
+    		<img src="images/floor-shadow.png" class="image-3">
+    	</div>    	
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">Our services</h2>
             <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi.</p>
@@ -75,7 +81,7 @@
             <p class="quotation-marks">,,</p>
         </div>
     </section>
-    <section class="our-prices">
+    <section class="our-prices" id="prices">
         <div class="container">
             <h2 class="section-title">Check our prices</h2>
             <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi.</p>
@@ -151,7 +157,7 @@
             </div>
         </div>
     </section> <!-- /.our-prices -->
-    <section class="additional-info">
+    <section class="additional-info-1">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-4">
@@ -220,6 +226,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-1.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -232,6 +239,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-2.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -244,6 +252,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-3.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -258,6 +267,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-4.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -270,6 +280,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-5.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -282,6 +293,7 @@
                     <div class="gallery-item">
                         <div class="photo-wrapper">
                             <img class="photo" src="images/photo-6.png">
+                            <div class="decoration"></div>
                             <div class="layer"><img class="photo-icon" src="images/loupe.png"></div>
                         </div>
                         <div class="photo-description">
@@ -297,5 +309,36 @@
             </div>
         </div>    
     </section>
+    <section class="additional-info-2">
+    	<div class="container">
+	    	<h2 class="section-title">Our latest updates</h2>
+	        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Morbi nec laoreet arcu. Quisque sit amet maximus risus. In hac habitasse platea dictumst. </p>
+	        <button>Show more</button>
+	    </div>
+    </section>
+    <section class="download">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12 col-lg-6 image-box">
+    				<img src="images/browser-window.png">
+    			</div>
+    			<div class="col-md-12 col-lg-6 text-wrapper">
+    				<h2 class="section-title">Mache free PSD template</h2>
+    				<p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere luctus malesuada. Ut sem nulla, fermentum non tortor a, maximus efficitur nisi. Fusce fringilla ipsum et urna tristique dapibus. Fusce dolor lorem, consectetur eget arcu sit amet, semper porttitor sapien. Morbi nec laoreet arcu. Quisque sit amet maximus risus. In hac habitasse platea dictumst. Nam volutpat nulla nec odio rutrum, at gravida odio facilisis</p>
+    				<button>Download now</button>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <footer>
+    	<div class="container footer-wrapper">
+    		<p>© 2015 Copyright Mache Template</p>
+    		<div class="design-by">
+    			<p>Design by</p>
+    			<img src="images/logo-small-white.png">
+    		</div>
+    	</div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
