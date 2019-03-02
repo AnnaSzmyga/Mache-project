@@ -662,6 +662,7 @@ button {
   border-radius: 25px;
   transition-duration: 0.3s;
   outline: none;
+  cursor: pointer;
 }
 
 button:hover {
@@ -1143,6 +1144,7 @@ section {
 .gallery .gallery-item {
   margin: 30px 15px;
   background-color: #f4f4f4;
+  cursor: pointer;
 }
 
 .gallery .gallery-item .photo-wrapper {

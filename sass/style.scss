@@ -39,6 +39,7 @@ button {
 	border-radius: 25px;
 	transition-duration: 0.3s;
 	outline: none;
+	cursor: pointer;
 	&:hover {
 		transform: scale(1.1);
 	}
@@ -452,6 +453,7 @@ section {
 	.gallery-item {
 		margin: 30px 15px;
 		background-color: $background-grey;
+		cursor: pointer;
 		.photo-wrapper {
 			position: relative;
 			
