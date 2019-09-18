@@ -764,6 +764,7 @@ header nav .menu ul li a {
   color: #fff;
   font-weight: bold;
   text-transform: capitalize;
+  transition: .3s;
 }
 
 header .jumbotron {
@@ -1219,6 +1220,7 @@ section {
   cursor: pointer;
   margin-top: 80px;
   display: inline-block;
+  transition: .3s;
 }
 
 .gallery .show-more p {
@@ -1227,6 +1229,10 @@ section {
   color: #ed145b;
   font-weight: 700;
   margin-bottom: 0;
+}
+
+.gallery .show-more:hover {
+  transform: scale(1.05);
 }
 
 .additional-info-2 {
