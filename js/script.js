@@ -36,20 +36,6 @@ buttonNext.addEventListener('click', () => changeSlide(1));
 
 
 
-// Changing images decorations width whenever browser window is resizing
-
-function setDecorationsWidth(){
-	var decorationsWidth = document.querySelector('.photo').width + 'px';
-	var decorations = document.querySelectorAll('.decoration');
-	for (var i = 0; i < decorations.length; i++) {
-		decorations[i].style.borderRightWidth = decorationsWidth;
-	}
-}
-setDecorationsWidth();
-
-window.addEventListener("resize", setDecorationsWidth);
-
-
 // Modal
 
 function hideModal(){
