@@ -2,8 +2,11 @@
 
 //Mobile navigation
 
-document.querySelector('.hamburger').addEventListener('click', function(){
-	document.querySelector('.menu').classList.toggle('show-menu');
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', function(){
+	menu.classList.toggle('show-menu');
 });
 
 
@@ -37,13 +40,15 @@ buttonNext.addEventListener('click', () => changeSlide(1));
 
 
 // Modal
+const overlay = document.querySelector('.overlay');
+const buttonClose = document.querySelector('.close');
 
 function hideModal(){
-	document.querySelector('.overlay').classList.add('hide-modal');
+	overlay.classList.add('hide-modal');
 };
-document.querySelector('.close').addEventListener('click', hideModal);
+buttonClose.addEventListener('click', hideModal);
 
-document.querySelector('.overlay').addEventListener('click', function(event) {
+overlay.addEventListener('click', function(event) {
   if (event.target === this) {
     hideModal();
  }
