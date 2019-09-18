@@ -687,9 +687,10 @@ button:hover {
 
 header {
   width: 100%;
-  min-height: 800px;
+  height: 100vh;
   color: #f4f4f4;
   background-image: url(../images/background-image.png);
+  background-size: cover;
   background-position: 50% 0%;
   background-repeat: no-repeat;
   position: relative;
@@ -748,7 +749,7 @@ header nav .hamburger::after {
 
 header nav .menu ul li {
   display: inline-block;
-  list-type-style: none;
+  list-style-type: none;
   padding: 0 10px;
 }
 
@@ -1380,7 +1381,6 @@ footer .footer-wrapper .design-by p {
 
 @media (max-width: 991px) {
   header {
-    min-height: 700px;
     background-size: cover;
   }
   header nav {
@@ -1453,6 +1453,17 @@ footer .footer-wrapper .design-by p {
 }
 
 @media (max-width: 767px) {
+  header .jumbotron h1 {
+    font-size: 36px;
+    margin-top: 40px;
+  }
+  header .jumbotron p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  header .jumbotron button {
+    margin-top: 20px;
+  }
   .overlay {
     padding-top: 140px;
   }

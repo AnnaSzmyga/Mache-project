@@ -62,9 +62,10 @@ button {
 }
 header {
 	width: 100%;
-	min-height: 800px;
+	height: 100vh;
 	color: $background-grey;
 	background-image: url(../images/background-image.png);
+	background-size: cover;
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -112,7 +113,7 @@ header {
 		.menu {
 			ul li {
 				display: inline-block;
-				list-type-style: none;
+				list-style-type: none;
 				padding: 0 10px;
 				&:hover a {
 					color: $pink;
@@ -658,7 +659,6 @@ footer {
 }
 @media (max-width: 991px) {
 	header {
-		min-height: 700px;
 		background-size: cover;
 		nav {
 			flex-direction: column;
@@ -727,6 +727,19 @@ footer {
 }
 
 @media (max-width: 767px) {
+	header .jumbotron {
+		h1 {
+			font-size: 36px;
+			margin-top: 40px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 26px;
+		}
+		button {
+			margin-top: 20px;
+		}
+	}
 	.overlay {
 		padding-top: 140px;
 		.modal {
