@@ -9,26 +9,30 @@ document.querySelector('.hamburger').addEventListener('click', function(){
 
 // Changing text slides in 'quotes' section
 
-var slides = document.querySelectorAll('.quotes-text');
-function showPreviousSlide() {
-	for (var i = 1; i < slides.length; i++) {
-		if (slides[i].classList.contains('active')) {
-			slides[i].classList.remove('active');
-			slides[i - 1].classList.add('active');
+const allSlides = document.querySelectorAll('.quotes-text');
+const slides = [...allSlides];
+const buttonPrevious = document.querySelector('.btn-previous');
+const buttonNext = document.querySelector('.btn-next');
+
+const changeSlide = (n) => {
+	let activeSlideIndex;
+	slides.map((slide, index) => {
+		if (slide.classList.contains('active')) {
+			activeSlideIndex = index;
+			slide.classList.remove('active');
 		}
-	}
-}
-function showNextSlide() {
-	for (var i = 0; i < (slides.length - 1); i++) {
-		if (slides[i].classList.contains('active')) {
-			slides[i].classList.remove('active');
-			slides[i + 1].classList.add('active');
-		}
+	});
+	if ((activeSlideIndex + n) < 0) {
+		slides[slides.length - 1].classList.add('active');
+	} else if ((activeSlideIndex + n) >= slides.length) {
+		slides[0].classList.add('active');
+	} else {
+		slides[activeSlideIndex + n].classList.add('active');
 	}
 }
 
-document.querySelector('.btn-previous').addEventListener('click', showPreviousSlide);
-document.querySelector('.btn-next').addEventListener('click', showNextSlide);
+buttonPrevious.addEventListener('click', () => changeSlide(-1));
+buttonNext.addEventListener('click', () => changeSlide(1));
 
 
 
